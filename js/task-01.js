@@ -1,15 +1,8 @@
-const navEl = document.querySelectorAll('.item');
-console.log(`Number of categories: ${navEl.length}`);
+const catEl = document.querySelector("#categories");
+const categories = [...catEl.children];
+console.log(`Number of categories: ${categories.length}`);
 
-//Category: Animals
-//Elements: 4
-
-// const text = document.querySelectorAll('h2');
-// console.log(text.outerText); // text inside p.article-text
-
-//Category: Products
-//Elements: 3
-
-//Category: Technologies
-//Elements: 5
-
+for (const category of categories) {
+  console.log(`Category: ${category.firstElementChild.textContent}`);
+  console.log(`Elements: ${category.lastElementChild.childElementCount} `);
+}
