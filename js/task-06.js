@@ -12,11 +12,11 @@ inputEl.addEventListener('blur', onCheckInputLength);
 
 function onCheckInputLength() {
     if (inputEl.value.trim().length === Number(inputEl.dataset.length)) {
-        inputEl.classList.add("valid");
         inputEl.classList.remove("invalid");
+        inputEl.classList.add("valid");
       } else {
-        inputEl.classList.add("invalid");
         inputEl.classList.remove("valid");
+        inputEl.classList.add("invalid");
       }
 }
 
